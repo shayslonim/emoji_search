@@ -2,6 +2,9 @@ import React, {Component} from "react";
 import Button from 'react-bootstrap/Button';
 import {emojiDetailsList} from "./EmojiDetailsList";
 
+/**
+ * The EmojiList component shows the list of emojis and the search bar above it
+ */
 class EmojisList extends Component {
 
     constructor(props) {
