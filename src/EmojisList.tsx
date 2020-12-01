@@ -1,5 +1,5 @@
 import React, {/*Component,*/ useState} from "react";
-import Button from 'react-bootstrap/Button';
+//import Button from 'react-bootstrap/Button';
 import {EmojiDetails, emojiDetailsList} from "./EmojiDetailsList";
 
 /**
@@ -13,15 +13,15 @@ function EmojisList() {
             <div className="search-box">
                 <input name="search" className="form-control" onChange={e => handleSearch(e, setShownItemsList)}/>
             </div>
-            <ul className="list-group">
+            <ul className="list-group" >
                 {/*create a line for each emojiDetails object in the list*/}
                 {shownItemsList.map(emojiDetails => (
                     <li className="list-group-item">
                         {/*Show the emoji itself, and then its name in words*/}
                         {emojiDetails.emoji} {emojiDetails.name}
                         {/*Copy button*/}
-                        <Button variant="outline-dark" className="copy-button"
-                                onClick={() => handleCopy(emojiDetails.emoji)}>Copy</Button>
+                        <button className="copy-button"
+                                onClick={() => handleCopy(emojiDetails.emoji)}>Copy</button>
                     </li>
                 ))}
             </ul>
@@ -50,7 +50,7 @@ function handleSearch(e: React.ChangeEvent<HTMLInputElement>,
     //searchTerm is the text the user typed in the search-box
     let searchTerm = e.target.value;
     //Get all the emojis that their description contains the search term
-    let emojis_filtered = emojiDetailsList.filter(value => (value["tags"].some(s => s.includes(searchTerm))));
+    let emojis_filtered = emojiDetailsList.filter(value => (value.tags.some(s => s.includes(searchTerm))));
     setShownItemsList(emojis_filtered);
 }
 

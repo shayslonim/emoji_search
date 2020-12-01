@@ -13,19 +13,38 @@ code {
     monospace;
 }
 
+
 .list-group-item {
+    vertical-align: middle;
     border-top: 1px solid #ddd;
     border-radius: 0;
     color: #000;
     font-size: 22px;
-    /*vertical-align: middle;*/
+    display: inline-block;
+/*vertical-align: middle;*/
 
+}
+.copy-button {
+    font-family: "Helvetica", serif;
+    float: right;
+    transition-duration: 0.4s;
+    border-radius: 4px;
+    /*font-size: 18px;*/
+    /*padding: 16px;*/
+    background-color: white;
+    border: 1px solid mediumpurple;
+    padding: 6px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.copy-button:hover {
+    background-color: mediumpurple;
+    color: white;
 }
 
 .search-box {
     margin: 1em 1em;
-}
-
-.copy-button {
-    float: right;
 }
