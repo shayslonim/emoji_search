@@ -1,9 +1,18 @@
-/*The emojiDetailsList const holds the data of all the emojis.
-* The name is the text shown next to the emoji to describe it
-* The description explains the emoji with more details (currently not used)
-* The emoji is the unicode character itself
-* The tags list is used to search the emoji*/
-export const emojiDetailsList = [{
+/**
+ * The emojiDetailsList const holds the data of all the emojis.
+ * The name is the text shown next to the emoji to describe it
+ * The description explains the emoji with more details (currently not used)
+ * The emoji is the unicode character itself
+ * The tags list is used to search the emoji
+ */
+export interface EmojiDetails {
+    name: string;
+    description: string;
+    emoji: string;
+    tags: Array<string>;
+}
+
+export const emojiDetailsList: Array<EmojiDetails> = [{
     'name': 'smile',
     'description': 'smiling face with open mouth and smiling eyes',
     'emoji': '😄',
@@ -22,12 +31,12 @@ export const emojiDetailsList = [{
     'name': 'blush',
     'description': 'smiling face with smiling eyes',
     'emoji': '😊',
-    'tags': ['proud', 'blush']
+    'tags': ['proud', 'blush', 'cute', 'happy']
 }, {
     'name': 'relaxed',
     'description': 'white smiling face',
     'emoji': '☺️',
-    'tags': ['blush', 'pleased', 'relaxed']
+    'tags': ['blush', 'pleased', 'relaxed', 'cute', 'happy']
 }, {
     'name': 'wink',
     'description': 'winking face',
